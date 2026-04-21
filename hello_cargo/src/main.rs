@@ -3,7 +3,15 @@ use std::io::{self, Read, ErrorKind};
 use std::fs;
 use std::error::Error;
 
+struct Point<T, U> {
+    x: T,
+    y: U,
+}
+
 fn main() -> Result<(), Box<dyn Error>> {
+    let integer = Point { x : 5, y: 10 };
+    let float = Point { x : 5.0, y: 10.0 };
+    let float2 = Point { x : 5.0, y: 10 };
     // panic!("Crash and burn");
 
     // let v = vec![1, 2, 3];
